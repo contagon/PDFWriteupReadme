@@ -6,11 +6,11 @@ A better way would have been to use pandocs.. but this requires handling math, i
 
 To use, simply add the following files to your repo
 * `.github/workflows/writeup_readme.yml` - The actual action
-* `.README.md` - Is appended above images from writeup
 * `writeup.pdf` - Actual writeup
 * `README.md` - Need something there to begin with, whether it's empty or full, it WILL be replaced.
+* `.README.md` - Is appended above images from writeup (optional)
 
-The action will be triggered on changes to `.README.md` or `writeup.pdf` in the master branch. Below is an example:
+The action will be triggered on changes to `.README.md` or `writeup.pdf` in the master branch. Below is an example.
 
 ## Outline
 
@@ -20,5 +20,7 @@ Basically it does things in this order
 * Recreate `README.md`
 * If `README.md` has changed, push it to master branch.
 
-![image](https://github.com/contagon/PDFWriteupReadme/blob/readme_images/output-000.jpg?raw=true)
-![image](https://github.com/contagon/PDFWriteupReadme/blob/readme_images/output-001.jpg?raw=true)
+## Example
+
+![image](https://github.com/contagon/PDFWriteupReadme/blob/$ORPHAN_BRANCH/output-000.jpg?raw=true)
+![image](https://github.com/contagon/PDFWriteupReadme/blob/$ORPHAN_BRANCH/output-001.jpg?raw=true)
