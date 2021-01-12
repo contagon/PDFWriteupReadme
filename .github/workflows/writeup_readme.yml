@@ -28,7 +28,7 @@ jobs:
     - name: Convert Writeup to Images
       uses: jruipinto/ImageMagick-action@v1
       with:
-        command: convert -density $DPI -trim -colorspace sRGB -alpha remove writeup.pdf -quality $QUALITY output-%03d.jpg
+        command: convert -density ${{env.DPI}} -trim -colorspace sRGB -alpha remove writeup.pdf -quality ${{env.QUALITY}} output-%03d.jpg
 
     ## COMMIT THEM TO A ORPHAN BRANCH
     - name: Commit images to orphan branch
