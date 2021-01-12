@@ -9,12 +9,13 @@ on:
     paths:
       - 'writeup.pdf'
       - '.README.md'
+      - '.github/workflows/writeup_readme.yml'
 
 jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      BRANCH: readme_images
+      ORPHAN_BRANCH: readme_images
     steps:
     - uses: actions/checkout@v2
       with:
