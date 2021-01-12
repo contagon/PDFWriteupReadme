@@ -10,7 +10,12 @@ To use, simply add the following files to your repo
 * `README.md` - Need something there to begin with, whether it's empty or full, it WILL be replaced.
 * `.README.md` - Is appended above images from writeup (optional)
 
-The action will be triggered on changes to `.README.md` or `writeup.pdf` in the master branch. Below is an example.
+The action will be triggered on changes to `.README.md`, `writeup.pdf` or `.github/workflows/writeup_readme.yml`. There's also a few env variables in it you can set:
+* `ORPHAN_BRANCH`: The name of the branch the images will be pushed to
+* `QUALITY`: Quality parameter 0-100 passed to ImageMagick. Default 85.
+* `DPI`: The density/DPI (dots per inch) passed to ImageMagick. Default 250.
+
+Note, you may increase `QUALITY` and `DPI` quite a bit for better images, but it will cost your README load time. These parameters have seemed like a good balance for me.
 
 ## Outline
 
