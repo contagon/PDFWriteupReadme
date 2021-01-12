@@ -33,7 +33,7 @@ jobs:
     ## COMMIT THEM TO A ORPHAN BRANCH
     - name: Commit images to orphan branch
       run: | 
-        git checkout --orphan $ORPHAN_BRANCH
+        git checkout --orphan ${{env.ORPHAN_BRANCH}}
         touch .README.md
         mv .README.md .README.temp
         git rm -rf .
@@ -45,7 +45,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: $ORPHAN_BRANCH
+        branch: ${{ env.ORPHAN_BRANCH }}
         force: true
 
     ## UPDATE README IN BRANCH IF IT NEEDS TO BE UPDATED
@@ -54,7 +54,7 @@ jobs:
       run: |
         echo $'\n' >> .README.temp
         for filename in *.jpg; do \
-          echo '![image](https://github.com/'$GITHUB_REPOSITORY'/blob/$ORPHAN_BRANCH/'$filename'?raw=true)' >> .README.temp;  \
+          echo '![image](https://github.com/'$GITHUB_REPOSITORY'/blob/${{env.ORPHAN_BRANCH}}/'$filename'?raw=true)' >> .README.temp;  \
         done
         git checkout ${{ github.ref }}
         rm README.md || (exit 0)
