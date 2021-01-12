@@ -27,5 +27,5 @@ Basically it does things in this order
 
 ## Example
 
-![image](https://github.com/contagon/PDFWriteupReadme/blob/$ORPHAN_BRANCH/output-000.jpg?raw=true)
-![image](https://github.com/contagon/PDFWriteupReadme/blob/$ORPHAN_BRANCH/output-001.jpg?raw=true)
+![image](https://github.com/contagon/PDFWriteupReadme/blob/readme_images/output-000.jpg?raw=true)
+![image](https://github.com/contagon/PDFWriteupReadme/blob/readme_images/output-001.jpg?raw=true)
